@@ -1,0 +1,32 @@
+.projects_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 120px 0;
+
+  &.pc {
+    width: 100%;
+    flex-direction: row;
+    box-shadow: 0 0 0 48px #FFFFFF inset;
+
+    img.projects_image {
+      width: auto;
+      max-width: 50%;
+      max-height: 480px;
+      margin: 24px;
+    }
+  }
+
+  &.mobile {
+    width: 100%;
+    flex-direction: column;
+    box-shadow: 0 0 0 24px #FFFFFF inset;
+
+    img.projects_image {
+      width: calc(100% - 96px);
+      max-width: 480px;
+      height: auto;
+      margin: 48px 24px 0;
+    }
+  }
+}

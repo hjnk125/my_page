@@ -1,0 +1,24 @@
+section.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("/public/image/black.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+
+  > .background {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    min-width: 800px;
+    height: 800px;
+    max-height: 800px;
+  }
+}

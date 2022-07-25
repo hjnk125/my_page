@@ -1,0 +1,121 @@
+section.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+
+  .pawdly_logo {
+    width: 100%;
+    padding: 0 64px;
+    margin: 0;
+  }
+
+  .pawdly_logo_mobile {
+    width: 100%;
+    padding: 8px 24px;
+    margin: 0;
+  }
+
+  .pawdly_more {
+    position: relative;
+    width: 100%;
+    height: 0;
+
+    > div {
+      position: absolute;
+      right: 0;
+      bottom: 48px;
+      z-index: 1;
+    }
+
+    img {
+      width: 160px;
+      height: 160px;
+      cursor: pointer;
+    }
+  }
+
+  .pawdly_more_mobile {
+    position: relative;
+    width: 100%;
+    height: 0;
+
+    > div {
+      position: absolute;
+      right: -12px;
+      bottom: 72px;
+      z-index: 1;
+    }
+
+    img {
+      width: 120px;
+      height: 120px;
+      cursor: pointer;
+    }
+  }
+
+  .pawdly_partners_logo {
+    width: 100%;
+    padding: 0 24px 8px;
+    margin: 0;
+  }
+
+  .pawdly_partners_logo_mobile {
+    width: 100%;
+    padding: 24px 8px;
+    margin: 0;
+  }
+
+  .donforget_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+
+    > img {
+      height: 48px;
+      margin-right: 16px;
+    }
+  }
+
+  .donforget_logo_mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+
+    > img {
+      height: 28px;
+      margin-right: 8px;
+    }
+  }
+
+  > .projects_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+  }
+}
+
+.projects_content {
+  > li {
+    margin-left: 16px;
+    margin-top: 4px;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: #191C1A;
+      border-radius: 50%;
+      margin-left: -16px;
+      margin-right: 10px;
+      margin-bottom: 2px;
+    }
+  }
+}

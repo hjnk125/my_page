@@ -1,0 +1,77 @@
+section.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  > div {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+
+    &.pc {
+      p {
+        text-align: center;
+        width: 640px;
+        margin-top: 24px;
+      }
+    }
+
+    &.mobile {
+      p {
+        text-align: center;
+        width: 80%;
+        margin-top: 24px;
+        //background: repeating-linear-gradient(to top, transparent, transparent 10px, #FFFFFF 10px, #FFFFFF 36px);
+      }
+
+    }
+  }
+
+
+  .skills_icon_container {
+    position: absolute;
+
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 8px;
+    }
+
+    &.react {
+      top: 10%;
+      left: 10%;
+    }
+
+    &.javascript {
+      top: 25%;
+      left: 30%;
+    }
+
+    &.sass {
+      top: 15%;
+      left: 70%;
+    }
+
+    &.styled_components {
+      top: 60%;
+      left: 90%;
+    }
+
+    &.figma {
+      top: 70%;
+      left: 5%;
+    }
+
+    &.jquery {
+      top: 85%;
+      left: 55%;
+    }
+  }
+}
