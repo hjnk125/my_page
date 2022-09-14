@@ -13,9 +13,16 @@ function ProjectsSection() {
     return (<section id={"projects"} className={pStyle.projects}>
         <h1 className={"section_title"}>PROJECTS</h1>
         <h2 className={"section_subtitle"}>
-            WORK EXPERIENCE - WORK EXPERIENCE - WORK EXPERIENCE - WORK EXPERIENCE - WORK EXPERIENCE - WORK
-            EXPERIENCE - WORK EXPERIENCE - WORK EXPERIENCE - WORK EXPERIENCE - WORK EXPERIENCE - WORK EXPERIENCE -
-            WORK EXPERIENCE - WORK EXPERIENCE
+            <p className={"marquee_content"}>
+                WORK EXPERIENCE - WORK EXPERIENCE - WORK EXPERIENCE - WORK EXPERIENCE - WORK EXPERIENCE - WORK
+                EXPERIENCE - WORK EXPERIENCE - WORK EXPERIENCE - WORK EXPERIENCE - WORK EXPERIENCE - WORK EXPERIENCE -
+                WORK EXPERIENCE -
+            </p>
+            <p className={"marquee_content"} aria-hidden="true">
+                WORK EXPERIENCE - WORK EXPERIENCE - WORK EXPERIENCE - WORK EXPERIENCE - WORK EXPERIENCE - WORK
+                EXPERIENCE - WORK EXPERIENCE - WORK EXPERIENCE - WORK EXPERIENCE - WORK EXPERIENCE - WORK EXPERIENCE -
+                WORK EXPERIENCE -
+            </p>
         </h2>
         <div className={pStyle.projects_container}>
             <ProjectItem title={"포들리"}
@@ -89,22 +96,59 @@ function ProjectsSection() {
         </div>
 
         <h2 className={"section_subtitle top"}>
-            TEAM PROJECTS - TEAM PROJECTS - TEAM PROJECTS - TEAM PROJECTS - TEAM PROJECTS - TEAM PROJECTS - TEAM
-            PROJECTS - TEAM PROJECTS - TEAM PROJECTS - TEAM PROJECTS -
-            TEAM PROJECTS - TEAM PROJECTS
+            <p className={"marquee_content"}>
+                TEAM PROJECTS - TEAM PROJECTS - TEAM PROJECTS - TEAM PROJECTS - TEAM PROJECTS - TEAM PROJECTS - TEAM
+                PROJECTS - TEAM PROJECTS - TEAM PROJECTS - TEAM PROJECTS -
+                TEAM PROJECTS -
+            </p>
+            <p className={"marquee_content"} aria-hidden="true">
+                TEAM PROJECTS - TEAM PROJECTS - TEAM PROJECTS - TEAM PROJECTS - TEAM PROJECTS - TEAM PROJECTS - TEAM
+                PROJECTS - TEAM PROJECTS - TEAM PROJECTS - TEAM PROJECTS -
+                TEAM PROJECTS -
+            </p>
         </h2>
 
         <div className={pStyle.projects_container}>
+            <ProjectItem title={"ocup"}
+                         backgroundColor={"rgba(249,243,104,0.5)"}
+                         imagePosition={"right"}
+                         imgUrl={"/image/ocup_project.gif"}
+                         boxTitle={<h1 className={isMobile ? pStyle.donforget_logo_mobile : pStyle.donforget_logo}>
+                             <img src={"/image/ocup_logo.png"} alt={"ocup"}/>
+                             <span className={isMobile ? "font_28pt bold" : "font_36pt"}>오늘의 컵홀더</span>
+                         </h1>}
+                         boxContent={<ul
+                             className={`${pStyle.projects_content} ${isMobile ? "font_14pt" : "font_16pt"}`}>
+                             <li>기간: <b>2022.06 - 2022.09</b></li>
+                             <li>사이드 프로젝트(3인)</li>
+                             <li>Position: <b>Front-End</b></li>
+                             <li>Skills: TypeScript, styled-components, React-Query, Recoil, Vercel, Supabase</li>
+                         </ul>}
+                         links={[
+                             {
+                                 name: "GitHub Wiki",
+                                 url: "https://github.com/o-cup",
+                                 icon: <FaArrowRight/>
+                             },
+                             {
+                                 name: "Visit Page",
+                                 url: "https://www.o-cup.kr",
+                                 icon: <FaArrowRight/>
+                             }
+                         ]}
+            />
+
             <ProjectItem title={"donforget"}
                          backgroundColor={"#322698"}
                          imagePosition={"left"}
                          imgUrl={"/image/donforget.png"}
                          boxTitle={<h1 className={isMobile ? pStyle.donforget_logo_mobile : pStyle.donforget_logo}>
                              <img src={"/image/donforget_logo.png"} alt={"donforget"}/>
-                             <span className={isMobile ? "font_28pt bold" : "font_48pt"}>돈't forget</span>
+                             <span className={isMobile ? "font_28pt bold" : "font_36pt"}>돈't forget</span>
                          </h1>}
                          boxContent={<ul
                              className={`${pStyle.projects_content} ${isMobile ? "font_14pt" : "font_16pt"}`}>
+                             <li>기간: <b>2020.10 - 2020.11</b></li>
                              <li>코드스테이츠 파이널 프로젝트(4인)</li>
                              <li>Position: <b>Team Leader</b></li>
                              <li>Skills: ES6, React-Hooks, React-Native, Sass, AWS</li>
@@ -131,6 +175,7 @@ function ProjectsSection() {
                                        style={{textAlign: "center", marginBottom: "8px"}}>Get-up-mate</h1>}
                          boxContent={<ul
                              className={`${pStyle.projects_content} ${isMobile ? "font_14pt" : "font_16pt"}`}>
+                             <li>기간: <b>2020.10 - 2020.10</b></li>
                              <li>코드스테이츠 퍼스트 프로젝트(4인)</li>
                              <li>Position: <b>Team Leader</b></li>
                              <li>Skills: ES6, React, CSS</li>

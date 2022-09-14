@@ -109,8 +109,33 @@
   border-bottom: 1px solid #000000;
   white-space: nowrap;
 
+  --gap: 0.3rem;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+
   &.top {
     border-top: 1px solid #000000;
     margin-top: 48px;
+  }
+
+  .marquee_content {
+    word-spacing: 0.2em;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: var(--gap);
+    animation: scroll 50s linear infinite;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
   }
 }
